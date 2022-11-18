@@ -1,0 +1,8 @@
+div{
+    background-color: yellow; /*задает цвет фона*/
+    padding: 5px; /*задает внутренние отступы*/
+    margin: 50px; /*задает внешние отступы*/
+    border: 6px outset green; /*задает границу*/
+    display: inline-block; /*Тип отображения*/
+    border-radius: 8px; /*радиус границы*/
+}
