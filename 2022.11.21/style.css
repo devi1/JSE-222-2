@@ -13,3 +13,12 @@ a{
 img{
     float: left;
 }
+
+td, th{
+    border: 1px solid black;
+    padding: 20px;
+}
+table{
+    border-spacing: 20px;
+    border-collapse:collapse;
+}
