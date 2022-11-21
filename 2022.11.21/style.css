@@ -1,0 +1,15 @@
+ul{
+    list-style-image: url("ico.png");
+}
+
+/* ol{
+    list-style-type: none;   
+} */
+
+a{
+    text-decoration: none;
+}
+
+img{
+    float: left;
+}
