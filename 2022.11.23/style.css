@@ -1,0 +1,28 @@
+div{
+    width: 200px;
+    height: 200px;
+    
+}
+
+.one{
+    position: static;
+    background-color: aqua;
+}
+
+.two{
+    position: relative;
+    background-color: blue;
+}
+
+.three{
+    position: fixed;
+    background-color: red;
+    margin-left: 200px;
+}
+
+.four{
+    position: absolute;
+    background-color: green;
+    /* margin-left: 400px; */
+    z-index: 1;
+}

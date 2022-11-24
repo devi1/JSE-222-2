@@ -1,0 +1,48 @@
+
+div:active{ /*Зажатая кнопка мыши*/
+    background-color: blueviolet;
+}
+
+input:focus{ /*При фокусе вводе текста обычно для инпутов*/
+    background-color: bisque;
+}
+
+li:first-child{ /*Первый дочерный элемент*/
+    background-color: aquamarine;
+}
+
+li:last-child{ /*Последний дочерный элемент*/
+    background-color: black;
+}
+
+li:nth-child(3){ /*Дочерный элемент с указанным номером*/
+    background-color: blue;
+}
+
+li:nth-child(odd){
+    background-color: green;
+}
+
+li:nth-child(even){
+    background-color: yellow;
+}
+
+a:visited{
+    color: red;
+}
+
+h1:before{
+    content: "♥ ";
+}
+h1:after{
+    content: " ♥";
+}
+
+p::first-line{
+    color: orange;
+}
+
+p::selection{
+    color: green;
+    background-color: red;
+}
