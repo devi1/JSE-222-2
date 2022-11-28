@@ -1,0 +1,14 @@
+ol{
+    counter-reset: count;
+}
+
+li{
+    list-style: none;
+    background-color: blue;
+}
+
+li:before{
+    counter-increment: count;
+    content: counter(count);
+    background-color: blue;
+}

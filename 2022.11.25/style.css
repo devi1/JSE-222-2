@@ -1,10 +1,18 @@
-
+div{
+    width: 150px;
+    height: 150px;
+}
+div:hover{
+    background-color: blue;
+}
 div:active{ /*Зажатая кнопка мыши*/
     background-color: blueviolet;
 }
 
 input:focus{ /*При фокусе вводе текста обычно для инпутов*/
     background-color: bisque;
+    width: 200px;
+    height: 50px;
 }
 
 li:first-child{ /*Первый дочерный элемент*/
@@ -45,4 +53,8 @@ p::first-line{
 p::selection{
     color: green;
     background-color: red;
+}
+
+body{
+    margin: 0;
 }
