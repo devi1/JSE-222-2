@@ -42,6 +42,8 @@
     100%{background-color: orchid;}
 } */
 
+
+/* Horizontal */
 img{
     width: 600px;
     height: 373px;
@@ -53,7 +55,6 @@ img{
 }
 
 .slides{
-    width: 3000px;
     display: flex;
     animation: slide 10s ease-in-out infinite;
     position: relative;
@@ -67,3 +68,28 @@ img{
     80%{left: -2400px;}
     100%{left: 0;}
 }
+
+
+/* Vertical */
+/* .slider{
+    width: 598px;
+    overflow: hidden;
+    height: 370px;
+}
+
+.slides{
+    width: 3000px;
+    display: flex;
+    flex-direction: column;
+    animation: slide 10s ease-in-out infinite;
+    position: relative;
+}
+
+@keyframes slide{
+    0%{top: 0;}
+    20%{top: -370px;}
+    40%{top: -740px;}
+    60%{top: -1110px;}
+    80%{top: -1480px;}
+    100%{top: 0;}
+} */
