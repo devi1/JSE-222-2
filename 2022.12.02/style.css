@@ -1,19 +1,41 @@
-.container{
-    display: grid;
-    background-color: aquamarine;
-    grid-template-columns: auto auto auto;
-    padding: 10px;
-    gap: 15px 50px;
+:root{
+    --fcolor: red;
+    --scolor: green;
+    --tcolor: blue;
+    --pad: 15px;
+    --bordering: dashed;
 }
 
-.container> div{
-    background-color: aqua;
-    border: 1px dashed;
-    padding: 15px;
+.container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background: linear-gradient(45deg,var(--fcolor), orange, yellow, var(--scolor), rgb(60, 60, 218), var(--tcolor), purple);
+    background-size: 400% 400%;
+    padding: 10px;
+    gap: 15px 50px;
+    animation: gradient 10s ease-in-out infinite;
+}
+
+.container > div{
+    background: linear-gradient(var(--fcolor), var(--scolor));
+    border: 1px var(--bordering);
+    padding: var(--pad);
     text-align: center;
 }
 
 .grid-item1{
     grid-row-start: 1;
     grid-row-end: 3;
+}
+
+@keyframes gradient{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
 }
