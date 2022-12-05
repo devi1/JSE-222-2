@@ -16,8 +16,8 @@
     animation: gradient 10s ease-in-out infinite;
 }
 
-.container > div{
-    background: linear-gradient(var(--fcolor), var(--scolor));
+.container> div{
+    background: radial-gradient(var(--fcolor), var(--scolor));
     border: 1px var(--bordering);
     padding: var(--pad);
     text-align: center;
