@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style-type: none;
+}
+
+div.nav{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+header > div >ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.hamburger{
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+    header > div >ul{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+    }
+
+    .hamburger > ul{
+        display: none;
+    }
+
+    .hamburger:hover ul{
+        display: block;
+        position: absolute;
+    }
+}
