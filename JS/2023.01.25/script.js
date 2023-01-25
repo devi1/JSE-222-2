@@ -55,3 +55,19 @@
 // let numTwo = +prompt("Enter the number");
 // let mid = (numOne + numTwo) / 2;
 // alert(mid);
+
+// Task 3
+
+// let a = +prompt("Enter the side of square");
+// let s = a**2;
+// alert(s);
+
+// Task 7
+
+let h = +prompt("Enter the hours");
+let m = +prompt("Enter the minutes");
+let lastMin = 24*60 - (h*60+m);
+let lastHour = Math.floor(lastMin/60);
+lastMin = lastMin - lastHour*60;
+
+alert(lastHour + ":" + lastMin);
