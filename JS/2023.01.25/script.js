@@ -26,19 +26,32 @@
 // --a; a--
 // = == ===
 
-let a = 2;
-let b = "2";
+// let a = 2;
+// let b = "2";
 
-if(a === b){
-    console.log("They are match!");
-}
-else if (a > b){
-    console.log("a more than b!");
-}
-else{
-    console.log("a less than b!");
-}
+// if(a === b){
+//     console.log("They are match!");
+// }
+// else if (a > b){
+//     console.log("a more than b!");
+// }
+// else{
+//     console.log("a less than b!");
+// }
 
-число**степень
+// число**степень
 
-Math.pow(число, степень)
+// Math.pow(число, степень)
+
+// Task 1
+
+// let num = +prompt("Enter the number")
+// num = num**2;
+// alert(num);
+
+//Task 2
+
+// let numOne = +prompt("Enter the number");
+// let numTwo = +prompt("Enter the number");
+// let mid = (numOne + numTwo) / 2;
+// alert(mid);
