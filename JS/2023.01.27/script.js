@@ -122,3 +122,19 @@
 //     m = "You are an adult";
 // }
 // alert(m);
+let num = +prompt("enter 6 digit number of your ticket"); // 123456
+
+let first = Math.floor(num/1000); // 123
+let second = num%1000; //456
+
+let sumOne = first%10 + (Math.floor(first/10)%10) + Math.floor(first/100); //6
+let sumTwo = second%10 + (Math.floor(second/10)%10) + Math.floor(second/100); // 15
+
+alert(sumOne + " " + sumTwo);
+
+if(sumOne == sumTwo){
+    alert("This is the lucky ticket");
+}
+else{
+    alert("Trry again with another ticket");
+}
