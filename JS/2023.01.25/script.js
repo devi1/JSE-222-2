@@ -64,10 +64,15 @@
 
 // Task 7
 
-let h = +prompt("Enter the hours");
-let m = +prompt("Enter the minutes");
-let lastMin = 24*60 - (h*60+m);
-let lastHour = Math.floor(lastMin/60);
-lastMin = lastMin - lastHour*60;
+// let h = +prompt("Enter the hours");
+// let m = +prompt("Enter the minutes");
+// let lastMin = 24*60 - (h*60+m);
+// let lastHour = Math.floor(lastMin/60);
+// lastMin = lastMin - lastHour*60;
 
-alert(lastHour + ":" + lastMin);
+// alert(lastHour + ":" + lastMin);
+
+// Task 8
+
+let a = +prompt("Enter the number");
+alert(Math.floor((a/10))%10);
