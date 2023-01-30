@@ -101,18 +101,63 @@
 
 //// Task 5
 
-let a = +prompt("Enter the number: ");
-let cnt = 0;
+// let a = +prompt("Enter the number: ");
+// let cnt = 0;
 
-for(let i = 2; i < a; i++){
-    console.log(i);
-    if(a%i == 0){
-        cnt++;
+// for(let i = 2; i < a; i++){
+//     console.log(i);
+//     if(a%i == 0){
+//         cnt++;
+//     }
+// }
+// if(cnt == 0){
+//     alert("Number is prime");
+// }
+// else{
+//     alert("Number is not prime");
+// }
+
+//// HW Task 1
+//1
+// let a = +prompt("Enter first number") //1
+// let b = +prompt("Enter second number") //5
+
+// let sum = 0;
+// for(let i = a; i <= b; i++){
+//     sum += i; 
+// }
+
+// alert(sum);
+//2
+// while(a <= b){
+//     sum += a;
+//     a++;
+// }
+
+// alert(sum);
+
+//// HW Task 2
+
+// let a = +prompt("Enter first number") //2
+// let b = +prompt("Enter second number") //2
+
+// while(a!=b){
+//     if(a > b){
+//         a = a - b; // 4 - 2 = 2
+//     }
+//     else{
+//         b = b - a; // 8 - 6 = 2
+//     }
+// }
+
+// alert(a);
+
+//// HW Task 3
+
+let a = +prompt("Enter a number");
+
+for(let i = 1; i <= a; i++){
+    if(a%i==0){
+        alert(i);
     }
-}
-if(cnt == 0){
-    alert("Number is prime");
-}
-else{
-    alert("Number is not prime");
 }
