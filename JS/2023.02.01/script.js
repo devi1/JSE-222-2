@@ -42,3 +42,57 @@
 // alert(mathR(h))
 // alert(mathR(i))
 // alert(mathR(j))
+
+//// Task 1
+
+// function check(f, s){
+//     if(f>s) return 1
+//     else if(f<s) return -1
+//     else return 0
+// }
+
+// alert(check(2,2));
+
+//// Task 3
+
+// function splitIt(a,b,c){
+//     return a*100+b*10+c;
+//     //retrun a+""+b+""+c
+// }
+
+// alert(splitIt(1,2,3));
+
+//// Task 4
+
+// function area(a, b){
+//     if(!a) return b*b;
+//     else if (!b) return a*a;
+//     else return a*b;
+// }
+
+//// Task 5
+
+function isPerfect(num){
+    let temp = 0;
+    for(let i = 1; i <= num/2; i++){
+        if(num%i == 0){
+            temp += i;
+        }
+    }
+
+    if(temp == num && temp!=0){
+        return true;
+    }
+    else return false;
+}
+
+let a = +prompt("enter first number");
+let b = +prompt("enter second number");
+
+function range(a, b){
+    for(let i = a; i <= b; i++){
+        if(isPerfect(i)) alert(i);
+    }
+}
+
+range(a, b);
