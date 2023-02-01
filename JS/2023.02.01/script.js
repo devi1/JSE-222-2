@@ -70,29 +70,45 @@
 //     else return a*b;
 // }
 
-//// Task 5
+//// Task 5/6
 
-function isPerfect(num){
-    let temp = 0;
-    for(let i = 1; i <= num/2; i++){
-        if(num%i == 0){
-            temp += i;
-        }
-    }
+// function isPerfect(num){
+//     let temp = 0;
+//     for(let i = 1; i <= num/2; i++){
+//         if(num%i == 0){
+//             temp += i;
+//         }
+//     }
 
-    if(temp == num && temp!=0){
-        return true;
-    }
-    else return false;
-}
+//     if(temp == num && temp!=0){
+//         return true;
+//     }
+//     else return false;
+// }
 
-let a = +prompt("enter first number");
-let b = +prompt("enter second number");
 
-function range(a, b){
-    for(let i = a; i <= b; i++){
-        if(isPerfect(i)) alert(i);
-    }
-}
 
-range(a, b);
+// let a = +prompt("enter first number");
+// let b = +prompt("enter second number");
+
+// function range(a, b){
+//     for(let i = a; i <= b; i++){
+//         if(isPerfect(i)) alert(i);
+//     }
+// }
+
+// range(a, b);
+
+//// Task 7/8
+
+// function time(a,b,c){
+//     if (!b){
+//         b = "00";
+//     }
+//     if (!c){
+//         c = "00";
+//     }
+//     return a+":"+b+":"+c;
+// }
+
+// alert(time(1))
