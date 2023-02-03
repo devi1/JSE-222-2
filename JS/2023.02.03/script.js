@@ -30,32 +30,49 @@
 
 // console.log(matrix);
 
-let user = {
-    name: "Damir", // свойство объекта
-    surname: "surname", // свойство объекта
-    age: 21, // свойство объекта
-    login: "login", // свойство объекта
-    "likes hiking": true, // свойство объекта
-    qwertyuiknbvfds: function(){  // метод объекта
-        alert("Hi, "+ this.name+"!");
-    }
-}   // структура объекта 
+// let user = {
+//     name: "Damir", // свойство объекта
+//     surname: "surname", // свойство объекта
+//     age: 21, // свойство объекта
+//     login: "login", // свойство объекта
+//     "likes hiking": true, // свойство объекта
+//     qwertyuiknbvfds: function(){  // метод объекта
+//         alert("Hi, "+ this.name+"!");
+//     }
+// }   // структура объекта 
  
-// свойство объекта это переменная внутри объекта
-// метод объекта это функция внутри объекта
+// // свойство объекта это переменная внутри объекта
+// // метод объекта это функция внутри объекта
 
-console.log(user["likes hiking"]); // вывод свойства объекта который состоит из нескольких раздельныых слов
+// console.log(user["likes hiking"]); // вывод свойства объекта который состоит из нескольких раздельныых слов
 
-delete user["likes hiking"]; // удаление свойства
+// delete user["likes hiking"]; // удаление свойства
 
-console.log(user);
+// console.log(user);
 
-user.name = "Anar"; // перезапись свойства объекта
+// user.name = "Anar"; // перезапись свойства объекта
 
-console.log(user);
+// console.log(user);
 
-user.gender = "female"; // добавление нового свойства
+// user.gender = "female"; // добавление нового свойства
 
-console.log(user);
+// console.log(user);
 
-user.qwertyuiknbvfds(); // вызов метода объекта
+// user.qwertyuiknbvfds(); // вызов метода объекта
+
+class Person{
+    constructor(name, age, gender){
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+    }
+    sayHi(){
+        alert('Hello, '+this.name + ' ' + this.age + ' ' + this.gender);
+    }
+}
+
+let user = new Person("Damir", 21, "Male");
+user.sayHi();
+
+let newUser = new Person("Askar", 20, "Male");
+newUser.sayHi();
