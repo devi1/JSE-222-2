@@ -40,8 +40,27 @@
 // str = arr.join('GLUE'); // Создает строку из массива через "Клей". В нашем случае наш "Клей" это слово GLUE
 // console.log(str);
 
-let arr = [1,2,3,4,5,6];
+// let arr = [1,2,3,4,5,6];
 
-arr.fill(9, 1,4) // заменяет элементы массива на переданное значение начиная от опредленного индекса и заканчивая другим индексом. НЕ ВКЛЮЧИТЕЛЬНО!
+// arr.fill(9, 1,4) // заменяет элементы массива на переданное значение начиная от опредленного индекса и заканчивая другим индексом. НЕ ВКЛЮЧИТЕЛЬНО!
 
-console.log(arr);
+// console.log(arr);
+
+// let arr = [];
+
+// for(let i = 0; i < 5; i++){
+//     let a = +prompt('Fill the array');
+//     arr.push(a);
+//     console.log(arr);
+// }
+
+// Task 3
+
+// let arrOne = [4,3,1,5,8,10,2]
+// let arrTwo = [3,2,4,5,10,7,1]
+
+// for(let i = 0; i < arrOne.length; i++){
+//     if(arrOne[i] > arrTwo[i]) console.log("Item of 1st arr is bigger")
+//     if(arrTwo[i] > arrOne[i]) console.log("Item of 2nd arr is bigger")
+//     if(arrOne[i] == arrTwo[i]) console.log("They are equal")
+// }
