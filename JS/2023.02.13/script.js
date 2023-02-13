@@ -27,27 +27,27 @@
 // sayHello(name7);
 // sayHello(name8);
 
-// let string1 = 'single-quoted';
-// let string2 = "double-quoted";
-// let string3 = `backtick`;
+// let string1 = 'single-quoted'; // Одинарные кавычки
+// let string2 = "double-quoted"; // Двойные кавычки
+// let string3 = `backtick`; // Апостраф
 
 // console.log(string3);
 
-// alert(`This is ${string1} string`)
+alert(`This is ${variableName} string`)
 
 let str = "qwertyuiopplkjhgfdsaZxcvbnm,";
 
-// console.log(str.length);
-// console.log(str.at(-3));
+// console.log(str.length); // Длинна строки
+// console.log(str.at(-3)); // Индекс строки
 
 // for(let c of str){
 //     console.log(c);
 // }
 
-// console.log(str.toUpperCase());
-// console.log(str.toLowerCase());
+// console.log(str.toUpperCase()); // Вверхний регистр
+// console.log(str.toLowerCase()); // Нижний регистр
 
-// console.log(str.indexOf('Zxcv'));
+// console.log(str.indexOf('Zxcv')); // Индекс вхождения подстроки
 
 // let target = "p";
 
@@ -60,5 +60,5 @@ let str = "qwertyuiopplkjhgfdsaZxcvbnm,";
 //     pos = fPos + 1;
 // }
 
-// console.log(str.substring(2, 6));
+// console.log(str.substring(2, 6)); // вывод подстроки
 // console.log(str.substring(6));
