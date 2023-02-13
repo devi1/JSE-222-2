@@ -33,9 +33,9 @@
 
 // console.log(string3);
 
-alert(`This is ${variableName} string`)
+// alert(`This is ${variableName} string`)
 
-let str = "qwertyuiopplkjhgfdsaZxcvbnm,";
+// let str = "qwertyuiopplkjhgfdsaZxcvbnm,";
 
 // console.log(str.length); // Длинна строки
 // console.log(str.at(-3)); // Индекс строки
@@ -74,3 +74,11 @@ let str = "qwertyuiopplkjhgfdsaZxcvbnm,";
 // 9. "какая-то рандомная строка" вывести позиции буквы "к"
 //10. Из "привет джс" сделать "Привет джс"
 //11. "ПРЛОр олрш цйыфы щорыва цаво" посчитать количество слов в данной строке
+
+let str = "апвлоыар олрш цйыфы щорыва цаво";
+let words = str.split(" ");
+let result = "";
+for (let word of words) {
+  result += word[0].toUpperCase() + word.slice(1) + " ";
+}
+console.log(result);
