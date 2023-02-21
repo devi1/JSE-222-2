@@ -25,7 +25,7 @@ function changeColor(){
 
 // body.addEventListener('mousemove', dicso)
 
-// function onDiv(){
+function onDiv(){
     let div = document.getElementsByTagName('div')[0];
     div.addEventListener('mousemove', function(){
         let r = Math.round(Math.random()*256);
@@ -33,4 +33,4 @@ function changeColor(){
         let b = Math.round(Math.random()*256);
         div.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
     });
-// }
+}
