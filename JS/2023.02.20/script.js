@@ -26,11 +26,13 @@ function changeColor(){
 // body.addEventListener('mousemove', dicso)
 
 function onDiv(){
-    let div = document.getElementsByTagName('div')[0];
-    div.addEventListener('mousemove', function(){
-        let r = Math.round(Math.random()*256);
-        let g = Math.round(Math.random()*256);
-        let b = Math.round(Math.random()*256);
-        div.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-    });
+    let div = document.getElementsByTagName('div');
+    for (let i = 0; i < div.length; i++) {
+        div[i].addEventListener('mousemove', function(){
+            let r = Math.round(Math.random()*256);
+            let g = Math.round(Math.random()*256);
+            let b = Math.round(Math.random()*256);
+            div[i].style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+        });
+    }
 }
