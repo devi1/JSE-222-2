@@ -1,14 +1,14 @@
-let form = document.forms.myForm;
+let form = document.forms.myForm; // обращение к форме по ее имени
 
 console.log(form);
 
-let second = form.elements.first;
+let second = form.elements.first; // обращение к инпуту внутри формы по его имени
 
 console.log(second[0].value);
 
-console.log(document.forms);
+console.log(document.forms); 
 
-let formTwo = document.forms[1];
+let formTwo = document.forms[1]; // обращение к форме по ее индексу
 
 let secondTwo = formTwo.elements.second;    
 console.log(secondTwo.value);
