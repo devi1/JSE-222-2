@@ -29,14 +29,21 @@ let ctx = cvs.getContext('2d');
 // ctx.lineTo(120,140);
 // ctx.stroke();
 
+// добавляем изображения
 let bird = new Image()
 let bg = new Image()
 let fg = new Image()
 let pipeUp = new Image()
 let pipeBottom = new Image()
 
+//Указываем их путь
 bird.src = "img/bird.png";
 bg.src = "img/bg.png";
 fg.src = "img/fg.png";
 pipeUp.src = "img/pipeUp.png";
 pipeBottom.src = "img/pipeBottom.png";
+
+
+//Добавляем звуковые эффекты
+let jump = new Audio();
+let score_audio = new Audio();
