@@ -47,3 +47,81 @@ pipeBottom.src = "img/pipeBottom.png";
 //Добавляем звуковые эффекты
 let jump = new Audio();
 let score_audio = new Audio();
+
+jump.src = "audio/jump.mp3";
+score_audio.src = "audio/score.mp3";
+
+let gap = 90;
+
+// Движение вверх
+document.addEventListener("keydown", moveUp);
+
+function moveUp(){
+    yPos -= 15;
+    jump.play();
+}
+
+// Создание блоков
+let pipe = [];
+
+pipe[0] = {
+    x : cvs.width,
+    y : 0
+}
+
+// Подсчет очков
+let score = 0;
+let state = true;
+
+// Позиция птички
+let xPos = 10;
+let yPos = 10;
+let gravity = 1.5;
+
+function draw(){
+    ctx.drawImage(bg, 0,0);
+
+    for(let i = 0; i < pipe.length; i++){
+        ctx.drawImage(pipeUp, pipe[i].x, pipe[i].y);
+        ctx.drawImage(pipeBottom, pipe[i].x, pipe[i].y + pipeUp.height + gap)
+
+        pipe[i].x--;
+
+        if(pipe[i].x == 60){
+            pipe.push({
+            x : cvs.width,
+            y : Math.floor(Math.random() * pipeUp.height) - pipeUp.height
+        });
+        }
+
+        //Отслеживание прикосновения
+        if(xPos + bird.width >= pipe[i].x && 
+        xPos <= pipe[i].x + pipeUp.width &&
+        (yPos <= pipe[i].y + pipeUp.height || yPos + bird.height >= pipe[i].y + pipeUp.height + gap) || yPos+bird.height >= cvs.height-fg.height){
+            state = false;
+            return false;
+        }
+
+        if(pipe[i].x == 5){
+            score++;
+            score_audio.play();
+        }
+    }
+
+    ctx.drawImage(fg, 0, cvs.height - fg.height);
+    ctx.drawImage(bird, xPos, yPos);
+
+    yPos += gravity;
+
+    ctx.fillStyle = "black";
+    ctx.font = "24px Verdana";
+    ctx.fillText("Score: " + score, 10, cvs.height - 20)
+
+    requestAnimationFrame(draw);
+
+    return state;
+}
+
+if(state == true){
+    pipeBottom.onload = draw;
+}
