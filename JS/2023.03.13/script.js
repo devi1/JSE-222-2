@@ -21,3 +21,7 @@ console.log(str.match(regexp));
 console.log(str2.match(regexp)); 
 console.log(str3.match(regexp)); 
 console.log(str4.match(regexp)); 
+
+// 1. Дана строка 'ahb acb aeb aeeb adcb axeb'. Напишите регулярку, которая найдет строки ahb, acb, aeb по шаблону:
+// 2. Дана строка 'aba aca aea abba adca abea'. Напишите регулярку, которая найдет строки abba adca abea по шаблону
+// 3. Дана строка 'aba aca aea abba adca abea'. Напишите регулярку, которая найдет строки abba и abea, не захватив adca
