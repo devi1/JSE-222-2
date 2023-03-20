@@ -1,7 +1,5 @@
 let input = document.getElementById('color');
 
-// localStorage.clear();
-
 function save(){
     localStorage.setItem('color', input.value);
     console.log(localStorage.getItem('color'));
@@ -9,7 +7,6 @@ function save(){
     let rgx = /[a-f0-9]/gi
     if(color.match(rgx) != null && color.match(rgx).length == 6){
         let div = document.createElement('div');
-        
         div.style.width = '100px';
         div.style.height = '100px';
         div.style.backgroundColor = `${color}`;
@@ -18,8 +15,4 @@ function save(){
     else{
         alert('Invalid color');
     }
-    // console.log(color.match(rgx));
 }
-
-// function create(){
-// }
