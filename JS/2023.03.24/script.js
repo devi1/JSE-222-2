@@ -47,45 +47,84 @@
 // 4XX Client Error
 // 5XX Server Error
 
-function makeRequest(url){
-    let httpRequest = false;
+// function makeRequest(url){
+//     let httpRequest = false;
 
-    if(window.XMLHttpRequest){
-        httpRequest = new XMLHttpRequest();
-        if(httpRequest.overrideMimeType){
-            httpRequest.overrideMimeType('text/xml');
-        }
-    }
-    else if(window.ActiveXObject){
-        try{
-            httpRequest = new ActiveXObject('Msxml2.XMLHTTP');
-        }
-        catch(e){
-            try{
-                httpRequest = new ActiveXObject('Microsoft.XMLHTTP');
-            }
-            catch(e){};
-        }
-    }
+//     if(window.XMLHttpRequest){
+//         httpRequest = new XMLHttpRequest();
+//         if(httpRequest.overrideMimeType){
+//             httpRequest.overrideMimeType('text/xml');
+//         }
+//     }
+//     else if(window.ActiveXObject){
+//         try{
+//             httpRequest = new ActiveXObject('Msxml2.XMLHTTP');
+//         }
+//         catch(e){
+//             try{
+//                 httpRequest = new ActiveXObject('Microsoft.XMLHTTP');
+//             }
+//             catch(e){};
+//         }
+//     }
 
-    if(!httpRequest){
-        console.log("Have no response");
-        return false;
+//     if(!httpRequest){
+//         console.log("Have no response");
+//         return false;
+//     }
+//     httpRequest.onreadystatechange = function(){checkStatus(httpRequest);}
+//     httpRequest.open('get', url, true);
+//     httpRequest.send(null);
+// }
+
+// function checkStatus(httpRequest){
+//     if(httpRequest.readyState == 4){
+//         if(httpRequest.status == 200){
+//             let xmldoc = httpRequest.responseXML;
+//             let root_node = xmldoc.getElemntsByTagName('root').item(0);
+//             console.log(root_node.firstChild.data)
+//         }
+//         else{
+//             console.log("Something went wrong")
+//         }
+//     }
+// }
+
+
+let request = new XMLHttpRequest();
+
+request.onload = function() {
+    let xmlReq = this.responseXML;
+    let tags = xmlReq.getElementsByTagName("TITLE");
+    let text = "";
+    console.log(tags);
+    for(let i = 0; i < tags.length; i++) {
+        text = text + tags[i].childNodes[0].nodeValue + "<br>";
     }
-    httpRequest.onreadystatechange = function(){checkStatus(httpRequest);}
-    httpRequest.open('get', url, true);
-    httpRequest.send(null);
+    document.getElementById("change").innerHTML = text;
+}
+request.open("GET", "catalog.xml");
+request.send();
+
+function changeDoc(){
+    let request = new XMLHttpRequest();
+    request.onload = function(){
+        readXml(this);
+    }
+    request.open("GET", "catalog.xml");
+    request.send();
 }
 
-function checkStatus(httpRequest){
-    if(httpRequest.readyState == 4){
-        if(httpRequest.status == 200){
-            let xmldoc = httpRequest.responseXML;
-            let root_node = xmldoc.getElemntsByTagName('root').item(0);
-            console.log(root_node.firstChild.data)
-        }
-        else{
-            console.log("Something went wrong")
-        }
+function readXml(xml){
+    let xmlDoc = xml.responseXML;
+    let tags = xmlDoc.getElementsByTagName("CD");
+    let table = "<tr><th>Artists</th><th>Title</th></tr>"
+    for(let i=0; i<tags.length; i++){
+        table += "<tr><td>" + 
+        tags[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
+        "</td><td>" + 
+        tags[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+        "</td></tr>";
     }
+    document.getElementById("change").innerHTML = table;
 }
