@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form action="www.youtube.com" method="post">
+        <input type="text">
+        <input type="submit" value="Submit">
+    </form> -->
+
+    <!-- method - атрибут в который мы прописываем GET или POST -->
+    <!-- action - атрибут в который мы прописываем наш сервер/источник -->
+    <!-- GET method - запрашивает данные с заданныого сервера/источника -->
+    <!-- POST method - отправляет/обновляет данные в заддный сервер/источник -->
+    <div class="container">
+        <form method="GET" onsubmit="checkForm(event);">
+            <p>
+                Create some color
+            </p>
+            <span>
+                Color name
+            </span>
+            <span class="wrongname"></span>
+            <input type="text" class="input_name" name="color" placeholder="Name of the color">
+            <span>
+                Type
+            </span>
+            <select name="type" id="selected">
+                <option value="RGB">RGB</option>
+                <option value="RGBA">RGBA</option>
+                <option value="HEX">HEX</option>
+            </select>
+            <span>
+                Color code
+            </span>
+            <span class="wrongcode"></span>
+            <input type="text" class="input_code">
+            <input type="button" class="input_save" value="Save" onclick="checkForm()">
+        </form>
+        <div class="box"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
