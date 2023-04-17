@@ -9,9 +9,9 @@ $(document).ready(function(){
         // $("div").prepend("<input type='text' value='v,cbphweroj;dkhfhid'>")
         // $("div").remove('.div2')
         // $("div").empty()
-        // $("a").attr('href', "netflix.com")
-        // $("a").text('Netflix')
-        $('div').removeClass("myDiv")
+        $("a").attr('href', "netflix.com")
+        $("a").text('Netflix')
+        // $('div').removeClass("myDiv")
     })
 
 })
